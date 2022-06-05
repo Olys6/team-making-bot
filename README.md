@@ -1,6 +1,6 @@
 # team-making-bot
 
-Invite the bot to your server <a href="https://discord.com/oauth2/authorize?client_id=973226470086410320&permissions=274878031936&scope=bot"></a>
+Invite the bot to your server <a href="https://discord.com/oauth2/authorize?client_id=973226470086410320&permissions=274878031936&scope=bot">here</a>
 
 # General Team Maker
 
