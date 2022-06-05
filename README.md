@@ -1,5 +1,7 @@
 # team-making-bot
 
+Invite the bot to your server <a href="https://discord.com/oauth2/authorize?client_id=973226470086410320&permissions=274878031936&scope=bot"></a>
+
 # General Team Maker
 
 <h4>The General Team Maker takes name values split by a space and returns a randomized set of teams.</h4>
