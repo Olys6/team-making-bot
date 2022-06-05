@@ -137,7 +137,7 @@ async def on_message(message):
                 team4.append(name)
             is_not_balanced = True
         while is_not_balanced:
-            if ((len(team1) > len(team2) + 1) or (len(team1) > len(team3) + 1) or (len(team1) > len(team4) + 1) or (len(team2) > len(team3) + 1) or (len(team2) > len(team1) + 1) or (len(team2) > len(team4) + 1) or (len(team3) > len(team1) + 1) or (len(team3) > len(team2) + 1) or (len(team3) > len(team4) + 1)) == False:
+            if ((len(team1) > len(team2) + 1) or (len(team1) > len(team3) + 1) or (len(team1) > len(team4) + 1) or (len(team2) > len(team3) + 1) or (len(team2) > len(team1) + 1) or (len(team2) > len(team4) + 1) or (len(team3) > len(team1) + 1) or (len(team3) > len(team2) + 1) or (len(team3) > len(team4) + 1 or (len(team4) > len(team3) + 1) or (len(team4) > len(team2) + 1) or (len(team4) > len(team1) + 1))) == False:
                 is_not_balanced = False
             if len(team1) > len(team2) + 1:
                 random_pop = random.randint(0, len(team1) - 1)
