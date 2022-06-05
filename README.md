@@ -26,7 +26,7 @@ To use the overwatch team maker, type command: <code>!ow name1:role name2:role n
 <div style="display: flex; flex-direction: column;">
     <h3>examples:</h3>
     <p></p>
-    <div style="display: flex; flex-direction: column-reverse; gap:1rem; ">
+    <div style="display: flex; flex-direction: row-reverse; gap:1rem; ">
         <div style="display: flex; flex-direction: column; gap: 1rem">
             <img src="assets\OverwatchTeamMaker\OwOv6TeamMakerEx.png" >
             <img src="assets\OverwatchTeamMaker\OwTeamMakerTooManyEx.png">
