@@ -23,7 +23,7 @@ async def on_message(message):
 
     msg = message.content
 
-# ? TEAM MAKER CODE
+# ? TEAM MAKER CODE MADE BY: Olys6(https://github.com/Olys6)
     teamSeperator = "\n- "
 
 # 2 TEAMS MAKER
@@ -254,7 +254,7 @@ async def on_message(message):
 
         for player in players:
             person = player.split(":")[0].title()
-            if "tank" in player or "dps" in player or "sup" in player:
+            if ":tank" in player or ":dps" in player or ":sup" in player and len(availableRoles) > 0:
                 role = player.split(":")[1]
                 if role == "tank":
                     numTanks += 1
@@ -262,14 +262,16 @@ async def on_message(message):
                     result.append(
                         ":small_blue_diamond: " + f"[ {person} ] is playing [ {chosenTank} ] " + ":small_blue_diamond:")
                     tanks.pop(tanks.index(chosenTank))
-                    availableRoles.pop(availableRoles.index("tank"))
+                    if "tank" in availableRoles:
+                        availableRoles.pop(availableRoles.index("tank"))
                     # print(tanks)
                 elif role == "dps":
                     numDps += 1
                     chosenDps = dpss[random.randint(0, len(dpss)-1)]
                     result.append(":small_orange_diamond: " + f"[ {person} ] is playing [ {chosenDps} ] " + ":small_orange_diamond: ")
                     dpss.pop(dpss.index(chosenDps))
-                    availableRoles.pop(availableRoles.index("dps"))
+                    if "dps" in availableRoles:
+                        availableRoles.pop(availableRoles.index("dps"))
                     # print(dpss)
                 elif role == "sup":
                     numSup += 1
@@ -277,37 +279,42 @@ async def on_message(message):
                     result.append(
                         ":yellow_heart: " + f"[ {person} ] is playing [ {chosenSup} ] " + ":yellow_heart:")
                     supports.pop(supports.index(chosenSup))
-                    availableRoles.pop(availableRoles.index("sup"))
+                    if "sup" in availableRoles:
+                        availableRoles.pop(availableRoles.index("sup"))
                     # print(supports)
             else:
                 playersWithoutRole.append(player)
 
             if player == players[-1]:
                 for player in playersWithoutRole:
-                    choseAvailableRole = availableRoles[random.randint(
-                        0, len(availableRoles)-1)]
-                    if choseAvailableRole == "tank":
-                        numTanks += 1
-                        chosenTank = tanks[random.randint(0, len(tanks)-1)]
-                        result.append(
-                            ":small_blue_diamond: " + f"[ {player.title()} ] is playing [ {chosenTank} ] " + ":small_blue_diamond:")
-                        tanks.pop(tanks.index(chosenTank))
-                        availableRoles.pop(availableRoles.index("tank"))
-                    elif choseAvailableRole == "dps":
-                        numDps += 1
-                        chosenDps = dpss[random.randint(0, len(dpss)-1)]
-                        result.append(
-                            ":small_orange_diamond: " + f"[ {player.title()} ] is playing [ {chosenDps} ] " + ":small_orange_diamond:")
-                        dpss.pop(dpss.index(chosenDps))
-                        availableRoles.pop(availableRoles.index("dps"))
-                    elif choseAvailableRole == "sup":
-                        numSup += 1
-                        chosenSup = supports[random.randint(
-                            0, len(supports)-1)]
-                        result.append(
-                            ":yellow_heart: " + f"[ {player.title()} ] is playing [ {chosenSup} ] " + ":yellow_heart:")
-                        supports.pop(supports.index(chosenSup))
-                        availableRoles.pop(availableRoles.index("sup"))
+                    if len(availableRoles) > 0:
+                        choseAvailableRole = availableRoles[random.randint(0, len(availableRoles)-1)]
+
+                        if choseAvailableRole == "tank":
+                            numTanks += 1
+                            chosenTank = tanks[random.randint(0, len(tanks)-1)]
+                            result.append(
+                                ":small_blue_diamond: " + f"[ {player.title()} ] is playing [ {chosenTank} ] " + ":small_blue_diamond:")
+                            tanks.pop(tanks.index(chosenTank))
+                            if "tank" in availableRoles:
+                                availableRoles.pop(availableRoles.index("tank"))
+                        elif choseAvailableRole == "dps":
+                            numDps += 1
+                            chosenDps = dpss[random.randint(0, len(dpss)-1)]
+                            result.append(
+                                ":small_orange_diamond: " + f"[ {player.title()} ] is playing [ {chosenDps} ] " + ":small_orange_diamond:")
+                            dpss.pop(dpss.index(chosenDps))
+                            if "dps" in availableRoles:
+                                availableRoles.pop(availableRoles.index("dps"))
+                        elif choseAvailableRole == "sup":
+                            numSup += 1
+                            chosenSup = supports[random.randint(
+                                0, len(supports)-1)]
+                            result.append(
+                                ":yellow_heart: " + f"[ {player.title()} ] is playing [ {chosenSup} ] " + ":yellow_heart:")
+                            supports.pop(supports.index(chosenSup))
+                            if "sup" in availableRoles:
+                                availableRoles.pop(availableRoles.index("sup"))
 
         result = "\n\n".join(sorted(result))
 
@@ -319,7 +326,7 @@ async def on_message(message):
             if(numTanks > 2):
                 msgSend += f":red_circle: You have {numTanks - 2} too many tanks in your team! \n"
             if(numDps > 2):
-                msgSend += f":red_circle: You have {numDps - 2} too many Dps characters in your team! \n"
+                msgSend += f":red_circle: You have {numDps - 2} too many dps characters in your team! \n"
             if(numSup > 2):
                 msgSend += f":red_circle: You have {numSup - 2}  too many supports in your team! \n"
 
