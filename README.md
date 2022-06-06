@@ -10,7 +10,7 @@ To use the general team maker, type command: <code>!teamup[number of teams you w
 <div style="display: flex; flex-direction: column;">
     <h3>examples:</h3>
     <div>
-        <img src="assets\GeneralTeamMaker\2TeamMakerEx.png" style="width: 30%" >
+        <img src="assets\GeneralTeamMaker\2TeamMakerEx.png" style="width: 30%; border-radius: 5px;" >
         <img src="assets\GeneralTeamMaker\3TeamMakerEx.png" style="width: 30%">
         <img src="assets\GeneralTeamMaker\4TeamMakerEx.png" style="width: 30%">
     </div>
