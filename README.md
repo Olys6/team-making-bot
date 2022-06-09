@@ -6,7 +6,7 @@ if you wish to use this bot's code for your own bot feel free to do so by:
 1. Cloning this repository
 2. install discord.py with command <code>pip install discord</code>
 3. Create a <code>.env</code> file
-4. In the <code>.env</code> put in your discord token with the variable <code>DISCORD_TOKEN="your_discord_token"</code>
+4. In that <code>.env</code> file put in your discord token like so: <code>DISCORD_TOKEN="your_discord_token"</code>
 5. Enjoy the bot!
 
 # General Team Maker
