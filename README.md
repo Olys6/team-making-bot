@@ -1,6 +1,14 @@
 # team-making-bot
 <h3>Invite the bot to your server <a href="https://discord.com/oauth2/authorize?client_id=973226470086410320&permissions=274878031936&scope=bot">here</a></h3>
 
+if you wish to use this bot's code for your own bot feel free to do so by:
+
+1. Cloning this repository
+2. install discord.py with command <code>pip install discord</code>
+3. Create a <code>.env</code> file
+4. In the <code>.env</code> put in your discord token with the variable <code>DISCORD_TOKEN="your_discord_token"</code>
+5. Enjoy the bot!
+
 # General Team Maker
 
 <h4>The General Team Maker takes name values split by a space and returns a randomized set of teams.</h4>
